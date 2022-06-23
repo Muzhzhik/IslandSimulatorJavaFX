@@ -1,0 +1,165 @@
+areaHeight: 20
+areaWidth: 20
+plantQuantity: 4000
+simulationDuration: 2000
+plantConfigurations:
+    -   className: "Plant"
+        name: "🌱"
+        weight: 1
+        maxQuantityForCell: 200
+        lifeExpectancyLimit: 5
+        deathExpectancyLimit: 10
+animalConfigurations:
+    -   className: "Wolf"
+        name: "🐺"
+        weight: 50.0
+        maxQuantityForCell: 30
+        speed: 3
+        fullSatietyWeight: 8
+        currentHungryPercent: 100
+        startQuantity: 50
+        possibleChildQuantity: 3
+    -   className: "Fox"
+        name: "🦊"
+        weight: 8.0
+        maxQuantityForCell: 30
+        speed: 2
+        fullSatietyWeight: 2
+        currentHungryPercent: 100
+        startQuantity: 50
+        possibleChildQuantity: 3
+    -   className: "Eagle"
+        name: "🦅"
+        weight: 6.0
+        maxQuantityForCell: 20
+        speed: 3
+        fullSatietyWeight: 1
+        currentHungryPercent: 100
+        startQuantity: 50
+        possibleChildQuantity: 3
+    -   className: "Boa"
+        name: "🐍"
+        weight: 15.0
+        maxQuantityForCell: 30
+        speed: 1
+        fullSatietyWeight: 3
+        currentHungryPercent: 100
+        startQuantity: 50
+        possibleChildQuantity: 6
+    -   className: "Bear"
+        name: "🐻"
+        weight: 500.0
+        maxQuantityForCell: 5
+        speed: 2
+        fullSatietyWeight: 80
+        currentHungryPercent: 100
+        startQuantity: 50
+        possibleChildQuantity: 2
+    -   className: "Sheep"
+        name: "🐑"
+        weight: 70.0
+        maxQuantityForCell: 140
+        speed: 3
+        fullSatietyWeight: 15
+        currentHungryPercent: 100
+        startQuantity: 50
+        possibleChildQuantity: 3
+    -   className: "Rabbit"
+        name: "🐇"
+        weight: 2.0
+        maxQuantityForCell: 150
+        speed: 2
+        fullSatietyWeight: 0.45
+        currentHungryPercent: 100
+        startQuantity: 50
+        possibleChildQuantity: 5
+    -   className: "Mouse"
+        name: "🐁"
+        weight: 0.05
+        maxQuantityForCell: 500
+        speed: 1
+        fullSatietyWeight: 0.01
+        currentHungryPercent: 100
+        startQuantity: 50
+        possibleChildQuantity: 8
+    -   className: "Horse"
+        name: "🐎"
+        weight: 400.0
+        maxQuantityForCell: 20
+        speed: 4
+        fullSatietyWeight: 60
+        currentHungryPercent: 100
+        startQuantity: 50
+        possibleChildQuantity: 1
+    -   className: "Goat"
+        name: "🐐"
+        weight: 60.0
+        maxQuantityForCell: 140
+        speed: 3
+        fullSatietyWeight: 10
+        currentHungryPercent: 100
+        startQuantity: 50
+        possibleChildQuantity: 3
+    -   className: "Duck"
+        name: "🦆"
+        weight: 1.0
+        maxQuantityForCell: 200
+        speed: 4
+        fullSatietyWeight: 0.15
+        currentHungryPercent: 100
+        startQuantity: 50
+        possibleChildQuantity: 4
+    -   className: "Deer"
+        name: "🦌"
+        weight: 300.0
+        maxQuantityForCell: 20
+        speed: 4
+        fullSatietyWeight: 50
+        currentHungryPercent: 100
+        startQuantity: 50
+        possibleChildQuantity: 2
+    -   className: "Caterpillar"
+        name: "🐛"
+        weight: 0.01
+        maxQuantityForCell: 1000
+        speed: 0
+        fullSatietyWeight: 0
+        currentHungryPercent: 100
+        startQuantity: 50
+        possibleChildQuantity: 30
+    -   className: "Buffalo"
+        name: "🐃"
+        weight: 700.0
+        maxQuantityForCell: 10
+        speed: 3
+        fullSatietyWeight: 100
+        currentHungryPercent: 100
+        startQuantity: 50
+        possibleChildQuantity: 2
+    -   className: "Boar"
+        name: "🐗"
+        weight: 400.0
+        maxQuantityForCell: 50
+        speed: 2
+        fullSatietyWeight: 50
+        currentHungryPercent: 100
+        startQuantity: 50
+        possibleChildQuantity: 3
+animalInteractionList: #Table of interaction. #First row - left column and up row, other values are cross of it. Wolf can eat horse with chance 10, deer - 15, Rabbit - 60...
+    -   ["Wolf", "Boa", "Fox", "Bear", "Eagle", "Horse", "Deer", "Rabbit", "Mouse", "Goat", "Sheep", "Boar", "Buffalo", "Duck", "Caterpillar", "Plant"]
+    -   ["0", "0", "0", "0", "0", "10", "15", "60", "80", "60", "70", "15", "10", "40", "0", "0"] #wolf
+    -   ["0", "0", "15", "0", "0", "0", "0", "20", "40", "0", "0", "0", "0", "10", "0", "0"] #Boa
+    -   ["0", "0", "0", "0", "0", "0", "0", "70", "90", "0", "0", "0", "0", "60", "40", "0"] #Fox
+    -   ["0", "80", "0", "0", "0", "40", "80", "80", "90", "70", "70", "50", "20", "10", "0", "0"] #Bear
+    -   ["0", "0", "10", "0", "0", "0", "0", "90", "90", "0", "0", "0", "0", "80", "0", "0"] #Eagle
+    -   ["0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "100"] #Horse
+    -   ["0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "100"] #Deer
+    -   ["0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "100"] #Rabbit
+    -   ["0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "90", "100"] #Mouse
+    -   ["0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "100"] #Goat
+    -   ["0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "100"] #Sheep
+    -   ["0", "0", "0", "0", "0", "0", "0", "0", "50", "0", "0", "0", "0", "0", "90", "100"] #Boar
+    -   ["0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "100"] #Buffalo
+    -   ["0", "0", "0", "0", "0", "0", "0", "0", "50", "0", "0", "0", "0", "0", "90", "100"] #Duck
+    -   ["0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "100"] #Caterpillar
+    -   ["0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0"] #Plant
